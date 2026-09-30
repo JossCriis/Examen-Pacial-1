@@ -1,0 +1,604 @@
+/* Variables en CSS */
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #000000;
+    --morado: #5b279b;
+    --morado_berenjena: #4A2E35;
+    --amarilo: #F5F792;
+    --violeta: #7B5282;
+    --crema: #F7F4EA;
+    --verde: #8A9A86;
+    --azul:#2D4A58;
+    --arena: #D9C5B2;
+    --terracota: #C86D51;
+
+    /* Fuente pincipal */
+    --fuente_principal: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    /* Tamaño de fuente */
+    --tamaño_fuente: 3.3rem;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: var(--fuente_principal);
+    font-weight: 400;
+    background-image: linear-gradient(to top, var(--crema) 0%, var(--morado) 100%);
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+h2{
+    font-size: 2.8rem;
+    /* 1rem equivale a 10px*/
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+.sombra{
+    -webkit-box-shadow: 10px 17px 11px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 17px 11px -4px rgba(0,0,0,0.75);
+    box-shadow: 10px 17px 11px -4px rgba(0,0,0,0.75);
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, var(--arena) 0%, var(--blanco) 70%);
+    padding: 2rem;
+}
+
+.titulo{
+    /* text-align: center; */
+    font-size: var(--tamaño_fuente);
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--crema);
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+}
+
+.place {
+    background-color: var(--arena);
+    font-weight: 600;
+    color: var(--oscuro);
+}
+
+.boton {
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+    margin-bottom: 3rem;
+    /* Arriba y abajo va a tener el espacio */
+}
+
+.nav-bg{
+    background-color: var(--amarilo);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+}
+
+@media(min-width: 480px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .boton{
+        width: auto;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.navegacion-principal a{
+    padding: 1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--morado_berenjena);
+    color: var(--blanco);
+}
+
+.hero{
+    background-image: url(../img/hero.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgb(0, 0, 0 / 40%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media (min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        column-gap: 3rem;
+    }
+}
+
+.servicio{
+    padding: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio p{
+    line-height: 1.8;
+    text-align: center;
+}
+
+.servicio .icono{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--terracota);
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formulario{
+    background-color: var(--arena);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--oscuro);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.enviar .botton{
+    width: 100%;
+    color: var(--morado_berenjena);
+}
+
+
+
+/* ----------------------------------- Diseño agregado por mi ------------------------- */
+
+.redes-sociales{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 3rem;
+    background-image: linear-gradient(to right , var(--crema) 0%, var(--arena) 70%);
+    background-color: var(--oscuro);
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    text-align: center;
+}
+
+/* ------------------------------ Sección de proceso de trabajo ------------------------- */
+
+
+.proceso-trabajo {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.proceso-trabajo h2 {
+    margin-bottom: 2.5rem;
+}
+
+/* Grid para los pasos */
+.pasos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .pasos-contenedor {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tarjetas individuales de cada paso */
+.paso-card {
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Círculo con el número del paso */
+.paso-numero {
+    background-color: var(--morado_berenjena); /* Tono a juego con el SVG hero */
+    color: var(--crema);
+    font-size: 2rem;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.paso-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--oscuro);
+}
+
+.paso-card p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--azul);
+    margin: 0;
+}
+
+footer{
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+/* S-------------------------- Sección de planes ------------------------- */
+.contenedor-planes {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.titulo-planes {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--oscuro);
+}
+
+.grid-planes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* Tarjeta Base */
+.tarjeta-plan {
+    background-color: var(--blanco);
+    border: 2px solid var(--crema);
+    border-radius: 1.2rem;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.tarjeta-plan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Tarjeta Destacada */
+.plan-destacado {
+    border-color: var(--morado);
+    background-color: var(--arena);
+}
+
+.etiqueta-popular {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--morado);
+    color: var(--blanco);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+
+/* Textos e Listas */
+.plan-nombre {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--oscuro);
+}
+
+.plan-subtitulo {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--blanco);
+    padding-bottom: 1rem;
+}
+
+.plan-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-lista li {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    color: var(--azul);
+}
+
+/* Vista en escritorio (3 columnas) */
+@media (min-width: 768px) {
+    .grid-planes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ----------------------------- Diseño de páginas secundarias ------------------------- */
+
+/* Estilos para las nuevas páginas */
+.lista-temas {
+    list-style: none;
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.lista-temas li {
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--terracota);
+    font-size: 1.1rem;
+    color: var(--oscuro);
+}
+
+.lista-temas li strong {
+    color: var(--morado);
+}
+
+.centrar-texto {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--oscuro);
+}
+
+.centrar-boton {
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------------ Página de portafolio ------------------------- */
+
+
+/* Estilos Exclusivos para Portafolio (Layout Zig-Zag) */
+.proyecto-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--arena);
+}
+
+.proyecto-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.proyecto-imagen {
+    width: 100%;
+}
+
+.proyecto-imagen img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto-info {
+    width: 100%;
+    text-align: left;
+}
+
+.categoria {
+    display: inline-block;
+    color: var(--morado);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.proyecto-info h3 {
+    margin-top: 0;
+    color: var(--oscuro);
+}
+
+/* Flexbox para pantallas grandes (Escritorio) */
+@media (min-width: 768px) {
+    .proyecto-item {
+        flex-direction: row;
+    }
+
+    .proyecto-imagen,
+    .proyecto-info {
+        width: 50%;
+    }
+
+    /* Invierte el orden visual para hacer el efecto Zig-Zag */
+    .proyecto-invertido {
+        flex-direction: row-reverse;
+    }
+}
+
+/* ----------------------------------- Carrusel de imagenes ------------------------- */
+
+.slider-box {
+    padding-bottom: 3rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    width: 25%;
+    list-style: none;
+    position: relative;
+    flex-shrink: 0; 
+}
+
+.slider-box img {
+    width: 100%;
+    height: 400px;       
+    object-fit: cover;   
+    display: block;
+}
+
+.texto {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 20px; 
+    width: 90%;
+    color: var(--oscuro);
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2; 
+    /* Mantiene el texto por encima de la imagen */
+}
+
+.texto h2 {
+    background-color: var(--arena);
+    border-radius: 1rem;
+    display: inline;
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.texto p {
+    background-color: var(--arena);
+    border-radius: 1rem;
+    display: inline;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* Animación ajustada por porcentajes*/
+@keyframes slide {
+    0%, 20% { transform: translateX(0%); }
+    25%, 45% { transform: translateX(-25%); }
+    50%, 70% { transform: translateX(-50%); }
+    75%, 100% { transform: translateX(-75%); }
+}
+
+
+
+
